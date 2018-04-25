@@ -1,8 +1,8 @@
-#iAvailability Zones - Change it
+#Availability Zones - Change it
 variable "azs" {
    type        = "list"
    description = "List of availability zones that instance can be provisioned to"
-   default     = [ "us-east-1a", "us-east-1b" ]
+   default     = [ "us-west-2a", "us-west-2b" ]
 }
 
 # AWS KeyName - Change it
@@ -19,7 +19,7 @@ variable "Public_SSHKey" {
 #Subnets - Change it
 variable "aws_subnet" {
     description = "Subnet for the ELB"
-    default     = [ "subnet-9297fff7", "subnet-b69ff99c" ]
+    default     = [ "subnet-c4e480a0", "subnet-2f65da59" ]
 }
 
 variable "ElasticLoadBalancer_Name" {
@@ -28,7 +28,7 @@ variable "ElasticLoadBalancer_Name" {
 }
 
 provider "aws" {
-    region     = "us-east-1"
+    region     = "us-west-2"
 }
 
 resource "aws_key_pair" "deployer" {
@@ -42,7 +42,7 @@ resource "aws_elb" "web" {
 
   # The same availability zone as our instance
   subnets         = ["${var.aws_subnet}"]
-  security_groups = ["sg-a47df2d1"]
+  security_groups = ["sg-f998189f"]
 
   listener {
     instance_port     = 80
