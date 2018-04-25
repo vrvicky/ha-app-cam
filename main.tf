@@ -82,7 +82,7 @@ resource "aws_instance" "web" {
 
   # Lookup the correct AMI based on the region we specified
 
-  ami = "ami-55ef662f"
+  ami = "ami-6b8cef13"
 
   # The name of our SSH keypair you've created and downloaded
   # from the AWS console.
