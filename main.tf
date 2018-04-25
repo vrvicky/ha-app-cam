@@ -1,4 +1,4 @@
-#Availability Zones - Change it
+#iAvailability Zones - Change it
 variable "azs" {
    type        = "list"
    description = "List of availability zones that instance can be provisioned to"
