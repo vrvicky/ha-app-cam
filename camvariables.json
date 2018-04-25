@@ -41,6 +41,6 @@
   "required": true,
   "hidden": false,
   "type": "list",
-  "default": [ "subnet-c4e480a0", "subnet-2f65da59" ]
+  "default": [ "subnet-de32bbba", "subnet-de32bbba" ]
 }]
 

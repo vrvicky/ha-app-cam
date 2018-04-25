@@ -19,7 +19,7 @@ variable "Public_SSHKey" {
 #Subnets - Change it
 variable "aws_subnet" {
     description = "Subnet for the ELB"
-    default     = [ "subnet-c4e480a0", "subnet-2f65da59" ]
+    default     = [ "subnet-de32bbba", "subnet-de32bbba" ]
 }
 
 variable "ElasticLoadBalancer_Name" {
@@ -42,7 +42,7 @@ resource "aws_elb" "web" {
 
   # The same availability zone as our instance
   subnets         = ["${var.aws_subnet}"]
-  security_groups = ["sg-f998189f"]
+  security_groups = ["sg-428f4024"]
 
   listener {
     instance_port     = 80
@@ -89,7 +89,7 @@ resource "aws_instance" "web" {
   # https://console.aws.amazon.com/ec2/v2/home?region=us-west-2#KeyPairs:
   key_name = "${aws_key_pair.deployer.key_name}"
 
-  vpc_security_group_ids = ["sg-a4febad1"]
+  vpc_security_group_ids = ["sg-428f4024"]
 
   user_data =  <<EOF
 #!/bin/bash
