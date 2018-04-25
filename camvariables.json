@@ -32,7 +32,7 @@
   "required": true,
   "hidden": true,
   "type": "list",
-  "default": [ "us-east-1a", "us-east-1b" ]  
+  "default": [ "us-west-2a", us-west-2b" ]  
 },
 {
   "decsription": "Subnet IDs",
@@ -41,6 +41,6 @@
   "required": true,
   "hidden": true,
   "type": "list",
-  "default": [ "subnet-9297fff7", "subnet-b69ff99c" ]
+  "default": [ "subnet-c4e480a0", "subnet-2f65da59" ]
 }]
 
